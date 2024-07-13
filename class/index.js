@@ -267,8 +267,54 @@ if (number1 > number2) {
 }
 
 
-*/
+// */
 
 
 
- console.log( 1 > 2 || 2 > 1 && 2 == 2);
+  var userage = 21;
+
+ if(userage >= 18) {
+  console.log("You are eligible to vote");
+ } else {
+  console.log("You are  not eligible to vote");
+ }
+
+ console.log ('-------------')
+ var day = 'sun';
+
+ switch (day) {
+  case 'Mon' : 
+console.log( 'It is a weekday back to work')  ;
+break;
+case 'tue' : 
+console.log( 'It is a weekday back to work')  ;
+break;
+
+case 'wed' : 
+console.log( 'It is a weekday back to work')  ;
+break;
+
+case 'thur' : 
+console.log( 'It is a weekday back to work')  ;
+break;
+
+case 'fri' : 
+console.log( 'It is a weekday back to work')  ;
+break;
+
+case 'sat' : 
+console.log( 'It is a weekend take rest!')  ;
+break;
+
+case 'sun' : 
+console.log( 'It is a weekend take rest!')  ;
+break;
+
+default : 
+  console.log('Error! , Select day properly');
+break;
+
+
+ }
+
+
