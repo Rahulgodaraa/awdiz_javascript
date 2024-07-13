@@ -267,7 +267,6 @@ if (number1 > number2) {
 }
 
 
-// */
 
 
 
@@ -316,5 +315,15 @@ break;
 
 
  }
-
-
+ */
+function licenceChecker(age) {
+  console.log(`User Input was :-  ${age}`);
+  if (age > 18 && age <= 60) {
+    console.log("User is elligible for Driving Liscense");
+  } else if (age <= 17 || age > 60) {
+    console.log("User is Not elligible for Driving Liscense");
+  } else {
+    console.log("User is elligible for Learning License");
+  }
+}
+licenceChecker(18);
