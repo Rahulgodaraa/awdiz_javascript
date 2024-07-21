@@ -502,7 +502,6 @@ console.log(Math.floor(number))
 console.log(Math.ceil(number))
 
 
-*/
 
 // Q . Sum of all numbers from range 10 - 40;
 
@@ -571,3 +570,45 @@ console.log(Math.floor(name.length / 2));
 var number =  536.3242;
 console.log(Math.floor(number))
 console.log(Math.ceil(number));
+
+
+
+
+var array = [1,2,3,4,5,6,7,8,9];
+
+let count=0;
+
+
+function arrcount(array)  {
+      for (let i = 0; i <= array.length-1; i++){
+       
+       if(array[i] == 1) {
+        count =+ array[i];
+       }
+       else if( array[i] % 2 == 1) {
+        count =+ array[i];
+        }
+        console.log(array[i] , ' In this index the count is ' + count);
+      } 
+      return 'final count ' +  count;
+
+}
+
+const output = arrcount(array);
+
+console.log(output);
+
+*/
+
+
+let names = ['name1','name2','name3','name4','name5'];
+
+names.push('name6');
+console.log(names);
+names.pop('name1');
+console.log(names);
+names.shift();
+console.log(names);
+names.unshift('names0');
+console.log(names);
+
