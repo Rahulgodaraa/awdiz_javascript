@@ -598,7 +598,6 @@ const output = arrcount(array);
 
 console.log(output);
 
-*/
 
 
 let names = ['name1','name2','name3','name4','name5'];
@@ -612,3 +611,43 @@ console.log(names);
 names.unshift('names0');
 console.log(names);
 
+
+var students = ["rahul", "nehal", "ali", "amod", "adep"];
+console.log(students.slice());
+console.log(students.slice(1));
+console.log(students.slice(2, 3));
+
+console.log(students.slice(-3));
+console.log(students.slice(3, -1));
+
+// 6. Splice
+
+var students = ["rahul", "nehal", "ali", "amod", "adep"];
+
+// .splice(index , 0/1 , new element) -> its return nothing i.e its update current array
+// 0 -> update
+// 1 -> replace
+
+students.splice(3, 0, "Virat");
+
+students.splice(1, 2, "virat");
+
+students.splice(3, 1);
+
+console.log(students);
+*/
+
+// Q Given an array of names find out index of target . 
+var students = ["rahul", "nehal", "ali", "amod", "adep"];
+var target = "adep"
+// output  : 4
+indexreturn  = (students , target) => {
+for (let i = 0 ; i < students.length; i++) {
+  if ( students[i] === target) {
+    return i;
+  }
+}
+}
+
+const output = indexreturn(students , target);
+console.log(output);
