@@ -635,7 +635,6 @@ students.splice(1, 2, "virat");
 students.splice(3, 1);
 
 console.log(students);
-*/
 
 // Q Given an array of names find out index of target . 
 var students = ["rahul", "nehal", "ali", "amod", "adep"];
@@ -651,3 +650,26 @@ for (let i = 0 ; i < students.length; i++) {
 
 const output = indexreturn(students , target);
 console.log(output);
+
+*/
+
+
+var array = [1,2,3,4,5,6,7];
+var target = 12;
+
+findnumadd = (array , target) => {
+       var num1 = 0;
+       var index = 0;
+       var arr2 = [];
+      for (let i = 0; i < array.length; i++) {
+        for (let j = 0 ; j < array.length; j++) {
+              if(array[i] + array[j] == target) {
+                arr2.push([array[i],array[j]]);  
+             }
+        }
+      }
+       
+       console.log(arr2);
+} 
+
+findnumadd(array , target);
