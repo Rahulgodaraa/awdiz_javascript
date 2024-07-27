@@ -38,7 +38,6 @@ ans = 2 2
 
 // */
 
-
 // Comparison Operators
 // Question 1: Write a function that takes two numbers and returns true if the first number is greater than the second, and false otherwise.
 
@@ -64,42 +63,105 @@ const output = Stringcomparison("apple", "Apple");
 console.log(output);
 */
 // Question 3: Create a function that takes an array of numbers and returns a new array with all elements greater than or equal to 10.
- var arr = [5,6,11,10,2]
-newarr = (arr) => {
-  var i = 0;
- var newar = [];
-  while(i < arr.length) { 
-if (arr[i] > 10) {
-    newar.push(arr[i]);
-} else i++;
-return newar;
-}
-}
+//  var arr = [5,6,11,10,2]
+// newarr = (arr) => {
+//   var newar = [];
+//   for(let i = 0; i<arr.length ; i++) {
+//     if(arr[i] >= 10 )
+//         newar.push(arr[i]);
+//   }
+// return newar;
+// }
+// const output = newarr(arr);
+// // console.log(output);
+// Conditional Statement (if-else)
+// Question 1: Write an if-else statement that checks if a number is positive, negative, or zero and logs the result.
 
-const output = newarr(arr);
-console.log(output);
+// let num1 = 10;
 
+// numchecker = (num1) => {
+// if (num1 < 0) return ('Number ' + num1 + ' is less then  0 and  negative');
+// else if (num1 == 0) return ('Number ' + num1 + ' is  zero');
+// else return ('Number ' + num1 + ' is greater then  0 and positive');
+// }
 
+// const ouput = numchecker(num1);
+// console.log(ouput);
 
+// Question 2: Create a function that accepts a score and returns a grade (A, B, C, D, F) based on the score using if-else statements.
 
+// let Score = 100;
+// gradesystem = (Score) => {
+//   if (Score >= 90) return 'A';
+//   else if (Score >= 70 && Score <= 80) return 'B';
+//   else if (Score >= 60 && Score <= 80) return 'C';
+//   else if (Score >= 35 && Score <= 60) return 'D';
+//   else return 'F';
 
+// }
 
+// const output = gradesystem(Score);
+// console.log(output);
 
+// Question 3: Write a function that checks if a given year is a leap year or not using if-else statements.
+//Can do it , will do it later
+
+// Conditional Statement (switch)
+// Question 1: Write a switch statement that logs the name of the day of the week based on a number input (1 for Monday, 2 for Tuesday, etc.).
+
+// const weeknum = 10;
+
+// switch (weeknum) {
+//   case 1:
+//     console.log("Monday");
+//     break;
+//   case 2:
+//     console.log("Tuesday");
+//     break;
+//   case 3:
+//     console.log("Wednesday");
+//     break;
+//   case 4:
+//     console.log("Thursday");
+//     break;
+//   case 5:
+//     console.log("Friday");
+//     break;
+//   case 6:
+//     console.log("Saturday");
+//     break;
+//   case 7:
+//     console.log("Sunday");
+//     break;
+//     default : console.log('Invalid weeknum')
+// }
+
+// Question 2: Create a function that takes a grade (A, B, C, D, F) and returns a message (Excellent, Good, Average, Poor, Fail) using a switch statement.
+
+// const grade = 'E';
+// gradesystem = (grade) => {
+//   switch (grade) {
+//     case 'A' : return 'Excelent' ; break;
+//     case 'B' : return 'Good' ; break;
+//     case 'C' : return 'Average' ; break;
+//     case 'D' : return 'Poor' ; break;
+//     case 'E' : return 'Fail' ; break;
+
+//   }
+// }
+
+// const output = gradesystem(grade);
+// console.log(output);
 
 /*
 
-Conditional Statement (if-else)
-Question 1: Write an if-else statement that checks if a number is positive, negative, or zero and logs the result.
-Question 2: Create a function that accepts a score and returns a grade (A, B, C, D, F) based on the score using if-else statements.
-Question 3: Write a function that checks if a given year is a leap year or not using if-else statements.
-Conditional Statement (switch)
-Question 1: Write a switch statement that logs the name of the day of the week based on a number input (1 for Monday, 2 for Tuesday, etc.).
-Question 2: Create a function that takes a grade (A, B, C, D, F) and returns a message (Excellent, Good, Average, Poor, Fail) using a switch statement.
 Question 3: Implement a switch statement that handles different types of user roles (admin, editor, viewer) and logs a different message for each role.
 Logical Operators (&&, ||)
 Question 1: Write a function that checks if a number is within a specified range (inclusive) using &&.
 Question 2: Create a function that returns true if a string is non-empty and its length is greater than 5, otherwise returns false using ||.
 Question 3: Write a function that checks if a person is eligible to vote based on age and citizenship using both && and ||.
+
+
 Traditional Function
 Question 1: Define a function named greet that takes a name as an argument and logs a greeting message.
 Question 2: Create a function sum that takes two numbers as arguments and returns their sum.
