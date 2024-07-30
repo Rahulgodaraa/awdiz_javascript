@@ -654,22 +654,50 @@ console.log(output);
 */
 
 
-var array = [1,2,3,4,5,6,7];
-var target = 12;
+// var array = [1,2,3,4,5,6,7];
+// var target = 12;
 
-findnumadd = (array , target) => {
-       var num1 = 0;
-       var index = 0;
-       var arr2 = [];
-      for (let i = 0; i < array.length; i++) {
-        for (let j = 0 ; j < array.length; j++) {
-              if(array[i] + array[j] == target) {
-                arr2.push([array[i],array[j]]);  
-             }
-        }
-      }
+// findnumadd = (array , target) => {
+//        var num1 = 0;
+//        var index = 0;
+//        var arr2 = [];
+//       for (let i = 0; i < array.length; i++) {
+//         for (let j = 0 ; j < array.length; j++) {
+//               if(array[i] + array[j] == target) {
+//                 arr2.push([array[i],array[j]]);  
+//              }
+//         }
+//       }
        
-       console.log(arr2);
-} 
+//        console.log(arr2);
+// } 
 
-findnumadd(array , target);
+// findnumadd(array , target);
+
+var string = "nayannayan";
+var count = 0;
+var strchar = '';
+
+function findDuplicates(string) {
+  var output = {};
+  console.log(string, "string");
+  for (var i = 0; i <= string.length - 1; i++) {
+    // console.log(string[i]);
+    // console.log(output[string[i]]);
+    if (output[string[i]] == undefined) {
+      output[string[i]] = 1;
+    } else {
+      output[string[i]]++;
+    }
+  }
+  for (char in output) {
+    if (output[char] > count ){
+      strchar = char;
+      count = output[char];
+    }
+  }
+  console.log(output , strchar , count);
+}
+
+findDuplicates(string);
+

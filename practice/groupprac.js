@@ -15,3 +15,5 @@ license = (students) => {
 
 const output = license(students);
 console.log(output);
+
+
