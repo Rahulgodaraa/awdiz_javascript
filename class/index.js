@@ -674,30 +674,117 @@ console.log(output);
 
 // findnumadd(array , target);
 
-var string = "nayannayan";
+// var string = "nayannayan";
+// var count = 0;
+// var strchar = '';
+
+// function findDuplicates(string) {
+//   var output = {};
+//   console.log(string, "string");
+//   for (var i = 0; i <= string.length - 1; i++) {
+//     // console.log(string[i]);
+//     // console.log(output[string[i]]);
+//     if (output[string[i]] == undefined) {
+//       output[string[i]] = 1;
+//     } else {
+//       output[string[i]]++;
+//     }
+//   }
+//   for (char in output) {
+//     if (output[char] > count ){
+//       strchar = char;
+//       count = output[char];
+//     }
+//   }
+//   console.log(output , strchar , count);
+// }
+
+// findDuplicates(string);
+
+// const students = [17, 18, 20, 50, 65];
+// const eligible = [];
+
+// license = (students) => {
+//   students.forEach((student) => {
+//     if (student > 18 && student <= 60) {
+//       console.log(student);
+//     }
+//   });
+// };
+
+// const output = license(students);
+// console.log(output);
+
+
+
+
+// var number = 3;
+//  var i = 1;
+// var sum = 0; 
+// while(i <= number)
+//   {
+//     sum = sum + i;
+//     i++;
+//     console.log(i,sum);
+
+    
+//   }
+//   console.log(sum);
+
+
+// Q Give an aray, do addition of numbers by using while loop .
+
+console.log('Q.1-----------')
+
+var array = [2, 4, 5, 6, 7, 8, 3, 2];
+// ouput : 120
+
+var sum = 0;
+var i = 0;
+while (i <= array.length-1) {
+  sum = sum + array[i];
+  // console.log(i,sum)
+  i++;
+} 
+console.log(sum);
+
+
+// Q Give an aray, find only odd numbers by using while loop .
+
+var array = [2, 4, 5, 6, 7, 8, 3, 2];
+// ouput
+// 5
+// 7
+// 3
+
+console.log('Q.2-----------')
+
+
+var newarr = [];
+var i = 0;
+while (i <= array.length-1) {
+  if (array[i] % 2 == 1) {
+    newarr.push(array[i]);
+  }
+  i++;
+} 
+console.log(newarr);
+
+
+// Q Give an aray, find count of even numbers by using while loop .
+
+var array = [2, 4, 5, 6, 7, 8, 3, 2];
+
+// ouput : 5
+console.log('Q.3-----------')
+
+
 var count = 0;
-var strchar = '';
-
-function findDuplicates(string) {
-  var output = {};
-  console.log(string, "string");
-  for (var i = 0; i <= string.length - 1; i++) {
-    // console.log(string[i]);
-    // console.log(output[string[i]]);
-    if (output[string[i]] == undefined) {
-      output[string[i]] = 1;
-    } else {
-      output[string[i]]++;
-    }
+var i = 0;
+while (i <= array.length-1) {
+  if (array[i] % 2 == 0) {
+    count++;
   }
-  for (char in output) {
-    if (output[char] > count ){
-      strchar = char;
-      count = output[char];
-    }
-  }
-  console.log(output , strchar , count);
-}
-
-findDuplicates(string);
-
+  i++;
+} 
+console.log(count);
