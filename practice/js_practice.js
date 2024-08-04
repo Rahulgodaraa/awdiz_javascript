@@ -3,8 +3,8 @@ Question 1: What will be the output of the following code and why?
 javascript
 console.log(a);
 var a = 10;
-ans = 10  wrong 
-Explanation -> 
+ans = 10  wrong
+Explanation ->
 Hoisting: In JavaScript, variable declarations (var, let, const) and function declarations are hoisted to the top of their containing scope. However, only the declarations are hoisted, not the initializations.
 Question 2: Rewrite the following code to explain how hoisting works with functions and variables:
 javascript
@@ -27,7 +27,7 @@ function test() {
 }
 test();
 
-ans = 2 2 
+ans = 2 2
 
 
 
@@ -55,8 +55,8 @@ console.log(output);
 
 /*
 Stringcomparison = (str1,str2) => {
-  // return str1 == str2; output : false 
-  // return str1 === str2;  ouput : flase 
+  // return str1 == str2; output : false
+  // return str1 === str2;  ouput : flase
 }
 
 const output = Stringcomparison("apple", "Apple");
@@ -185,3 +185,69 @@ Question 2: Create a function that reverses an array without using the built-in 
 Question 3: Write a function that sorts an array of numbers in ascending order.
 
 */
+
+//------------------------------Objects-------------------------------
+//--------------------------------------------------------------------
+
+// Given an object book with properties title, author, and year,
+//  write a function updateBook that updates the year property and adds a 
+// new property genre.
+/*
+
+const obj = {
+  name : "Rahul",
+  title : "Rahul",
+  author : "Rahul",
+  year : 2001
+}
+
+updateObj = (obj , newyear) =>{
+     obj.year = newyear;
+     obj.copies = 2;
+
+     console.log(obj);
+
+}
+updateObj(obj , 2024);
+
+*/
+
+// Write a function listProperties that takes an object 
+// as an argument and logs all its properties and values to the console.
+
+
+/* const obj = {
+  name : "Rahul",
+  title : "Rahul",
+  author : "Rahul",
+  year : 2001
+}
+
+for (let key in obj) {
+  console.log(key, obj[key]);
+} */
+
+  // Write a function mergeObjects that takes two objects and returns a
+  //  new object that merges their properties. If both object s have a 
+  // property with the same name , the value from the second object
+  //   should overwrite the value from the first object.
+
+ const obj = {
+  name : "Rahul",
+  title : "Rahul",
+  author : "Rahul",
+  year : 2001
+}
+
+
+const obj2 = {
+  name2 : "Rahul",
+  title2 : "Rahul",
+  author3 : "Rahul",
+  year : 2024
+}
+
+
+
+const obj3 =  {...obj , ...obj2};
+console.log(obj3)
