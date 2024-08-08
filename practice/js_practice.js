@@ -254,7 +254,125 @@
 
 /**************************************************************************************************************************************/
 
+/*-------------------------------------------------------------------map
 
-/*
+//1. Double Numbers:
+
+const numbers = [1, 2, 3, 4];
+
+doubleNumbers = (numbers) => {
+    const double = numbers.map(num => num+num)
+    // console.log(double)
+    return double;
+}
+const doubled = doubleNumbers(numbers);
+// console.log(doubled);
+
+
+//2.Add Exclamation:
+
+const words = ["hello", "world"];
+
+
+addExclamation = (words) => {
+     return words.map(word => word + '!');
+    //  words.map((word) => {
+    //      return words
+    //     // var newword = word[word.length-1];
+    //     // newword = '!';
+    //     // const newswords = word + newword;
+
+    //     // console.log(newswords)
+    //     // // const Excl = words[word.length].push('!');
+    // })
+}
+
+
+const exclaimed = addExclamation(words);
+// console.log(exclaimed);
+
+//Q3 Convert to Length:
+
+const strings = ["apple", "banana", "cherry"];
+
+function convertToLength(strings){
+   return strings.map(str => str.length )
+
+} 
+
+const lengths = convertToLength(strings);
+console.log(lengths);
 
 */
+
+
+/*-------------------------------------------------------------------Filter
+
+//Q1 Filter Odd Numbers:
+
+
+const numbers = [1, 2, 3, 4, 5];
+
+function filterOddNumbers(numbers) {
+    return numbers.filter(num => num % 2 === 1);
+}
+
+const oddNumbers = filterOddNumbers(numbers);
+console.log(oddNumbers);
+
+
+//Q2 Filter Strings Longer Than 4 Characters:
+
+const words = ["one", "three", "four", "five"];
+
+function filterLongWords(words)  {
+    return words.filter(str => str.length > 4);
+}
+
+const longWords = filterLongWords(words);
+console.log(longWords)
+
+//Q3 Filter Negative Numbers:
+
+const number = [-1, 2, -3, 4, -5];
+
+function filterPositiveNumbers(number) {
+    return number.filter(num => num > 0);
+}
+
+const positiveNumbers = filterPositiveNumbers(number);
+console.log(positiveNumbers);
+
+
+*/
+
+
+//----------------------------------------------------------------------reducer
+
+//Q1 Product of Numbers:
+
+const numbers = [1, 2, 3, 4];
+
+function multiplyNumbers(numbers) {
+    return numbers.reduce((acc , num) => acc * num, numbers[0]);
+}
+const product = multiplyNumbers(numbers);
+console.log(product);
+
+//Q2 Longest String:
+
+const strings = ["one", "three", "four"];
+
+function findLongestString(strings) {
+   return strings.reduce((longstr, currentstr) => {
+    if (currentstr > longstr ) {
+        longstr = currentstr;
+    } strings[1];
+    console.log(longstr);
+
+   })
+}
+
+const longest = findLongestString(strings);
+console.log(longest);
+
