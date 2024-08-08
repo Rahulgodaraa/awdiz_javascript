@@ -734,57 +734,66 @@ console.log(output);
 
 // Q Give an aray, do addition of numbers by using while loop .
 
-console.log('Q.1-----------')
+// console.log('Q.1-----------')
 
-var array = [2, 4, 5, 6, 7, 8, 3, 2];
-// ouput : 120
+// var array = [2, 4, 5, 6, 7, 8, 3, 2];
+// // ouput : 120
 
-var sum = 0;
-var i = 0;
-while (i <= array.length-1) {
-  sum = sum + array[i];
-  // console.log(i,sum)
-  i++;
-} 
-console.log(sum);
-
-
-// Q Give an aray, find only odd numbers by using while loop .
-
-var array = [2, 4, 5, 6, 7, 8, 3, 2];
-// ouput
-// 5
-// 7
-// 3
-
-console.log('Q.2-----------')
+// var sum = 0;
+// var i = 0;
+// while (i <= array.length-1) {
+//   sum = sum + array[i];
+//   // console.log(i,sum)
+//   i++;
+// } 
+// console.log(sum);
 
 
-var newarr = [];
-var i = 0;
-while (i <= array.length-1) {
-  if (array[i] % 2 == 1) {
-    newarr.push(array[i]);
-  }
-  i++;
-} 
-console.log(newarr);
+// // Q Give an aray, find only odd numbers by using while loop .
+
+// var array = [2, 4, 5, 6, 7, 8, 3, 2];
+// // ouput
+// // 5
+// // 7
+// // 3
+
+// console.log('Q.2-----------')
 
 
-// Q Give an aray, find count of even numbers by using while loop .
+// var newarr = [];
+// var i = 0;
+// while (i <= array.length-1) {
+//   if (array[i] % 2 == 1) {
+//     newarr.push(array[i]);
+//   }
+//   i++;
+// } 
+// console.log(newarr);
 
-var array = [2, 4, 5, 6, 7, 8, 3, 2];
+
+// // Q Give an aray, find count of even numbers by using while loop .
+
+// var array = [2, 4, 5, 6, 7, 8, 3, 2];
 
 // ouput : 5
-console.log('Q.3-----------')
+// console.log('Q.3-----------')
 
 
-var count = 0;
-var i = 0;
-while (i <= array.length-1) {
-  if (array[i] % 2 == 0) {
-    count++;
-  }
-  i++;
-} 
-console.log(count);
+// var count = 0;
+// var i = 0;
+// while (i <= array.length-1) {
+//   if (array[i] % 2 == 0) {
+//     count++;
+//   }
+//   i++;
+// } 
+// console.log(count);
+
+/***********************************************************DAY 16 (4/8)*****************************************************/  
+
+
+// try catch finally
+// promise
+// resolve , reject
+// 
+
