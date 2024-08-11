@@ -347,32 +347,121 @@ console.log(positiveNumbers);
 */
 
 
-//----------------------------------------------------------------------reducer
+/*----------------------------------------------------------------------reducer
 
 //Q1 Product of Numbers:
 
-const numbers = [1, 2, 3, 4];
+// const numbers = [1, 2, 3, 4];
 
-function multiplyNumbers(numbers) {
-    return numbers.reduce((acc , num) => acc * num, numbers[0]);
+// function multiplyNumbers(numbers) {
+//     return numbers.reduce((acc , num) => acc * num, numbers[0]);
+// }
+// const product = multiplyNumbers(numbers);
+// console.log(product);
+
+// //Q2 Longest String:
+
+// const strings = ["one", "three", "four"];
+
+// function findLongestString(strings) {
+//     return strings.reduce((longstr, currentstr) => {
+//     if (currentstr > longstr ) {
+//         longstr = currentstr;
+//     } strings[1];
+//     return longstr;
+//     // console.log(longstr);
+
+// }
+// )
+// }
+
+// const longest = findLongestString(strings);
+// console.log(longest);
+
+// //Q3 Count Words:
+
+// const words = ["apple", "banana", "apple", "orange", "banana", "apple"];
+
+// // var count = 0;
+// // const obj = {};
+// // var i = 0;
+// countWords = (words) => {
+
+//     return words.reduce((acc , cur) => {
+//            if (acc[cur] === undefined) {
+//             acc[cur] = 1;
+//            } else {
+//             acc[cur]+=1;
+//            }
+//        return acc;
+//     //    if (acc === cur) {
+//     //     obj.words[i] = count++;
+//     //     console.log(acc , cur , obj);
+//     //    } else cur++ ;
+//     } ,  {} )
+
+//     // return acc;
+
+// }
+
+// const wordCount = countWords(words);
+
+// console.log(wordCount);
+*/
+
+/*---------------------------------------------------------------------forEach
+
+// //Q1 Print Square
+
+// const number = [1,2,3,4]
+ 
+// // number.forEach(num => console.log(num*num));
+ 
+
+// //Q2 log Greetings
+// const names = ["Alice", "Bob", "Charlie"];
+
+// names.forEach(name => (console.log(`Hello, ${name}!`)))
+
+*/
+
+
+//---------------------------------------------------------------------forIN loop
+//Q1 list key value
+
+const object = {name: "Alice", age: 25, city: "Wonderland"};
+
+listKeysAndValues = (object) => {
+      for (const key in object) {
+        console.log(key , ':', object[key]);
+      }
 }
-const product = multiplyNumbers(numbers);
-console.log(product);
 
-//Q2 Longest String:
+// listKeysAndValues(object);
 
-const strings = ["one", "three", "four"];
+//Q2 Calculate Object Property Sum
+const scores = {math: 90, science: 85, history: 88};
 
-function findLongestString(strings) {
-   return strings.reduce((longstr, currentstr) => {
-    if (currentstr > longstr ) {
-        longstr = currentstr;
-    } strings[1];
-    console.log(longstr);
-
-   })
+sumObjectProperties = (scores) => {
+    var finalscore = 0;
+     for(const key in scores) {
+        console.log(finalscore+= scores[key])
+     }
 }
 
-const longest = findLongestString(strings);
-console.log(longest);
+// const total = sumObjectProperties(scores);
 
+//Q3 Convert Object to array
+
+const Objects = {a: 1, b: 2, c: 3};
+
+convertObjectToArray = (objects) => {
+    const arr = []
+        for (const key in objects) {
+            arr.push([key ,  objects[key]]);
+        }
+        return arr;
+}
+
+const array = convertObjectToArray(Objects);
+// console.log(array);
