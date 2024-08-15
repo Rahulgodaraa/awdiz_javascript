@@ -426,7 +426,7 @@ console.log(positiveNumbers);
 */
 
 
-//---------------------------------------------------------------------forIN loop
+/*---------------------------------------------------------------------forIN loop
 //Q1 list key value
 
 const object = {name: "Alice", age: 25, city: "Wonderland"};
@@ -465,3 +465,382 @@ convertObjectToArray = (objects) => {
 
 const array = convertObjectToArray(Objects);
 // console.log(array);
+*/
+
+/*--------------------------------------------------------------------Strings
+
+
+//--------------basic
+
+//Q.1 Reverse Words in a String
+
+// Problem: Write a function that takes a string as input and returns the string with each word reversed but the order of words preserved.
+
+function reverseWords(str) {
+    // Your code here
+    let singword = [];
+    let n = str.length-1;
+    for (let word of str) {
+        // let last = word[n];
+        singword = word ; 
+        // n--;
+        // word;
+    }
+    // let newstr = singword.toLowerCase();
+    console.log(singword);    
+
+}
+console.log(reverseWords("Hello World")); // Output: "olleH dlroW"
+*/
+
+//--------------------------------------------------js4 test 
+/* 
+// //----------------------------------Theaory-------------------------------------
+
+// //Q.1 Data types in Javascript
+
+// /*Q.1 Answer
+
+// 1. There are seven primitve data types in Javascript . 
+// 2. They are Number , String , BigInt , Boolean , Undefined , Null , 
+// 3. There are non-primitive data type in Javascript known has Object , It includes array and functions
+// 4. We can use Typeof keyword to know the Type of variables. for Example typeof 10 , typeof "10" , typeof true.
+
+// */
+
+// //Q.2 let const var
+
+// /*Q.1 Answer 
+
+// -LET
+// 1. Let , const and var are the keywords used in javscript to declare and initialize variables in js
+// 2. Variables declared using let can be re-declared at its respective scope .
+// 3. let has functional scope and can be re-assigned in its scope . Resulting in unwanted variable Shadowing
+// 4. Let is hoisted  at the top of its scope where only the declaration is hoisted not the initalizations.
+
+// -var 
+// 1. Var is block scope , where variables declared using its scope can be re-initialized in its scope.
+// 2. var variable is hoisted at the top of its scope. var variables can not be re-declared.
+// 3. Var is used for the variables that required to change the value with further uses.
+
+// -const 
+// 1. const variable is used for the varable those required to keep the initial value . 
+// 2. const is block scope it means it can be accessed inits scope. 
+// 3. const varable is ideal choice for maintaing the variable declaration . 
+// 4. There is exception in Const used in Object and array .
+// 5. Content in Object and array can be changed.
+// */
+
+// //Q.3 == and ===
+
+// /*Q3 Answer
+
+// 1. == and === are logical operator used to compare the the data. 
+// 2. == is used when the two data or variable need to be compared. 
+// 3. === is used when the data and the data type need to be comapred.
+// 4. there is also a single equal = , which is used to assign value to varble. 
+
+// */
+
+// //Q.4 prototypal inheritance in js
+
+// /*Q4 Answer
+// 1. Prototypal inheritance in js used to use the Method available in object .
+// 2. It let the objects present in same scope use there Methods. 
+// 3. It is not like the ideal inheritance where childeren uses properties of their parents. 
+// 4. Prototypal inheritance can be used in the client side also. 
+// 5. Js provides Number of prototypal methods that can be used to manipulate the value.
+// 6. Once value changed in client side browser changes from all its instance. 
+// */
+
+// //Q.5 Closures
+
+// /*Q5 Answer 
+
+// 1. Closures are the function which remembers the exsistance scope. 
+// 2. once a variable is declared in its outer function it can be accessed in inner function. 
+// 3. If the outer function is returned the inner function still access the varible 
+// */
+
+// //Q.6 Null and undefined
+
+// /*Q.6 Answer
+
+// 1. Null and undefined are two primitive data type in Javascript 
+// 2. Undefined is occered when a variable is declared but not initialised
+// 3. It does not throw any error but result in undefined.
+// 4. When a function does not return any value it throw undefined vlaue.
+// 5. Null is occured when a object or array is decalred but not assigned any value. 
+// */
+
+// //Q.7 This keyword
+
+// /*Answer Q7
+
+// 1. This keyword is used to access the variable or properties from current code.
+// 2. In object this refer to the current objects properties.
+// 3. In function this keyword refer to the global variable of that scope.
+// 4. This keyword access values from its Surrounding and returns value.
+
+//  */
+
+// //Q.9 Promises
+
+// /*Q9 Answer
+
+// 1. Promises in javascript are used to comunicate with the database.
+// 2. promises has two arguments resolve and reject.
+// 3. When the promise is successfully executed then it returns resolve . or when it fails it returns reject.
+// 4. promise used .then method to execute the message its successfull .
+// 5. if the promise is rejected it executes the catch method if used.
+// 6. Promises has 3 stages 
+//                                 a. Initial : pending state which is not yet success or rejected
+//                                 b. success : in this state the promise is successfull 
+//                                 c. Reject : in this state the promise is rejected
+// */
+
+// //Q10 Synchronous and asynchronous
+
+// /*
+// synchronous : -
+//                  1. javscript is a synchronous language
+//                  2. it means it executes syncronously or line by line code execution
+// asynchronous :-  
+//                  1. Asynchronous code is where the line by line code is not excuted
+//                  2. it includes the web apis like fetch() , time , file reading , etc
+//                  3. It occuers when a code of line takes time to excute when the other lines or function is executed
+//                  4. we use asynch and await keyword for this execution 
+// */
+
+// //Q11 Hoisting
+
+// /*
+// 1. Hoisting the property in javscript where a variable is moved to top of its lexial scope.
+// 2. Hoisting lets the global variable to be declared at the top of the scope.
+// 3. In var the declaration is hoisted at the top of the scope.
+// 4. let is hoisted but can not be reassigned 
+// 5. const cannot be hoisted.
+// */
+
+// //Q12 Arrow function
+
+// /*Q12 Answer
+
+// 1. Arrow function are introduced in ES2017 Version of javsacript.
+// 2. Arrow function uses => symbol to start the function.
+// 3. Arrow function cannot be used as argument for other functions.
+// 4. Arrow function are not stored in any individual variable 
+// 5. Syntax :- namefun = () => {};
+// 6. Arrow function can be anonymous or named.
+// */
+
+// //Q13 Event Loop
+
+// /*
+// 1. Event loop is the execution of a function.
+// 2. Event loop excecutes syncronous . 
+// 3. when a web api is countered it send it to web api space where is exceute and sent to call back queue.
+// */
+
+// //Q14 Error Handling
+// /*
+// 1. Try and catch is used for error handling js 
+// 2. Try is excueted all the lengthy codes .
+// 3. If any error is countered it does not show on client side and only showed in dev or terminal .
+// 4. From there we can handle the code without any interuption to the client.
+// */*/
+// //-----------------------------------------------------------Code
+
+const products = [
+  { name: "Laptop", Category: "Electronics", price: 1000 },
+  { name: "shirt", Category: "Clothing", price: 50 },
+  { name: "Phone", Category: "Electronics", price: 500 },
+  { name: "Shoe", Category: "Clothing", price: 80 },
+];
+const arr = [];
+// e = arr[i]
+filterAndTransform = (products, Category) => {
+  products.forEach((e) => {
+    if (e.Category === Category) {
+      arr.push([e.name, e.price]);
+    }
+  });
+//   console.log(arr);
+return arr;
+};
+
+// filterAndTransform(products , "Electronics")
+
+// const output = filterAndTransform(products , "Electronics");
+// console.log(output);
+
+//
+
+// var n = 5;
+// console.log(typeof 54545465465);
+// console.log(typeof "5");
+
+
+//     console.log( 5 === "5" );
+    
+
+const orders = [
+  { orderid: 1, tableNumber: 2, amount: 30 }, // orders[i]
+  { orderid: 2, tableNumber: 1, amount: 20 }, // 1
+  { orderid: 3, tableNumber: 2, amount: 50 },
+  { orderid: 4, tableNumber: 3, amount: 40 },
+  { orderid: 5, tableNumber: 1, amount: 10 },
+];
+
+//obj =  { 1: 30  , 2: 80 }
+function sumByTable(orders) {
+const obj = {};
+
+   for(let i in orders) {
+    const {tableNumber , amount } = orders[i]
+     if(obj[tableNumber]) {
+      obj[tableNumber] += amount;
+     } else {
+        obj[tableNumber] = amount
+     }
+    }
+    // return obj;
+    console.log(obj);
+    
+}
+
+const output = sumByTable(orders);
+console.log(output);
+
+
+
+// const students = [
+//     {name: "Alice" , subject: ["Math" , "Science"]},
+//     {name: "Bob" , subject: ["English" , "Science"]},
+//     {name: "Charlie" , subject: ["Math" , "History"]},
+//     {name: "David" , subject: ["Science" , "History"]}
+
+// ]
+
+
+// count = (students) => {
+//     const objs = {}
+//           students.forEach((e) => {
+//             e.subject.forEach((el) => {
+//                   if (objs[el] === el) {
+//                     objs[el]++
+//                   } else {
+//                     objs[el] = 1;
+//                   }
+                  
+//             })
+//           })
+//           return objs
+// }
+
+// // console.log(
+// //     count(students)
+// // );
+
+// const inventory = [
+//     {name : "Laptop" , quantity: 5, price: 1000},
+//     {name : "shirt" , quantity: 0, price: 50},
+//     {name : "phone" , quantity:10, price: 500},
+//     {name : "shoes" , quantity: 3, price: 80}
+// ]
+// function inventoryValue(inventory) {
+//     var total = 0;
+
+//       inventory.forEach((e) => {
+//         total = total + (e.quantity * e.price);
+//         // console.log(total);
+//       })
+//       return total;
+// }
+
+// // console.log(inventoryValue(inventory));
+
+
+// //Q 6 
+
+// const transactions = [
+//     {userId: 1, amount: 50, data:"2023-01-01"},
+//     {userId: 2, amount: 50, data:"2023-01-01"},
+//     {userId: 1, amount: 50, data:"2023-01-01"},
+//     {userId: 2, amount: 50, data:"2023-01-01"},
+//     {userId: 2, amount: 50, data:"2023-01-01"},
+// ];
+
+// // function topSenders(transactions) {
+// //     const userMap = new Map();
+// //     transactions.forEach(({}))
+// // }
+
+// const employees = [
+//     {name : "john" , department : "Engineering" , salary : 1000} ,
+//     {name : "jane" , department : "marketing" , salary : 1500} ,
+//     {name : "jim" , department : "Engineering" , salary : 500} ,
+//     {name : "jack" , department : "HR" , salary : 800} ,
+
+// ]
+// function getHighEarning(employees , minSalary) {
+//     const arr = [];
+//     employees.forEach((e) => {
+//             if (e.salary > minSalary) {
+//                 arr.push(e.name);
+//                 // console.log(arr);
+//             }
+//     })
+//     return arr;
+// }
+
+// // console.log( getHighEarning(employees , 800) );
+
+
+// const books = [{title: "Book A",author: "Author 1",genres:["Fiction","Mystery"]},
+//               {title: "Book B",author: "Author 2",genres:["Nonfiction","History"]},
+//               {title: "Book C",author: "Author 3",genres:["Fiction","History"]},
+//               {title: "Book D",author: "Author 4",genres:["Mystery","Thriller"]}];
+// function countGenres(books) {
+//     const objss = {}
+//     books.forEach((e) => {
+//         e.genres.forEach((el)=> {
+//             if (objss[el]) {
+//              objss[el]++
+//             } else {
+//                 objss[el] = 1;
+//             }
+//         })
+//     })
+//     return objss;
+// }
+
+// // console.log(countGenres(books));
+
+// const sale1 = [
+//     {productId : 1 , productName : "Product A" , amount : 100} ,
+//     {productId : 2 , productName : "Product A" , amount : 150} ,
+// ];
+
+// const sale2 = [
+//     {productId : 1 , productName : "Product A" , amount : 200} ,
+//     {productId : 3 , productName : "Product A" , amount : 300} ,
+// ]
+
+// function mergeAndSum(sale1,sale2){
+//     var output = []; 
+//     const objsss = {};
+
+//     output = [...sale1 , sale2];
+//     // console.log(output);
+//     output.forEach((e) => {
+//         if (objsss[e]) {
+//             objsss[e.amount] +=  objsss[e.amount]
+//         } else {
+//             objsss[e] = e;
+//         }
+//     })
+//     return objsss
+// }
+ 
+// console.log(mergeAndSum(sale1,sale2));
