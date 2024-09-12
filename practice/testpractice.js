@@ -1,8 +1,8 @@
 /* const orders = [
 
-//     { orderid: 1, tableNumber: 2, amount: 30 }, // 1
-//     { orderid: 2, tableNumber: 1, amount: 20 }, 
-//     { orderid: 3, tableNumber: 2, amount: 50 },
+//     { orderid: 1, tableNumber: 2, amount: 30 }, // {2:30}
+//     { orderid: 2, tableNumber: 1, amount: 20 },     {1:20 , 2:30}
+//     { orderid: 3, tableNumber: 2, amount: 50 },     {1:20 , 2:80}
 //     { orderid: 4, tableNumber: 3, amount: 40 },
 //     { orderid: 5, tableNumber: 1, amount: 10 },
 //   ];
@@ -58,7 +58,15 @@ console.log(countSubjects(students));
         {name : "phone" , quantity:10, price: 500},
         {name : "shoes" , quantity: 3, price: 80}
     ]
-    function inventoryValue(inventory) {}
+    function inventoryValue(inventory) {
+        var total = 0;
+          inventory.forEach((e)=> {
+            if(e.quantity > 0) {
+                total+= e.quantity * e.price
+            }
+          })
+          return total;
+    }
 
     console.log(inventoryValue(inventory));
     */
@@ -98,14 +106,20 @@ console.log(countSubjects(students));
         
 */
 /*const employees = [
-//         {name : "john" , department : "Engineering" , salary : 1000} ,
-//         {name : "jane" , department : "marketing" , salary : 1500} ,
-//         {name : "jim" , department : "Engineering" , salary : 500} ,
-//         {name : "jack" , department : "HR" , salary : 800} ,
+        {name : "john" , department : "Engineering" , salary : 1000} ,
+        {name : "jane" , department : "marketing" , salary : 1500} ,
+        {name : "jim" , department : "Engineering" , salary : 500} ,
+        {name : "jack" , department : "HR" , salary : 800} ,
     
-//     ]
-//     function getHighEarning(employees , minSalary) {}
-// console.log(getHighEarning(employees , "Engineering"));
+    ]
+    function getHighEarning(employees , minSalary) {
+        const newarr = employees.filter(e => e.salary > minSalary) // iska question 
+        .map(e => e.name) // iska question
+         return newarr
+    // console.log(newarr);
+    
+}
+console.log(getHighEarning(employees , 800));
 */
 /* const books = [{title: "Book A",author: "Author 1",genres:["Fiction","Mystery"]},
 // //               {title: "Book B",author: "Author 2",genres:["Nonfiction","History"]},
@@ -115,9 +129,7 @@ console.log(countSubjects(students));
 
 // // // console.log(countGenres(books));
 */
-
-
-const sale1 = [
+/*const sale1 = [
         {productId : 1 , productName : "Product A" , amount : 100} ,
         {productId : 2 , productName : "Product B" , amount : 150} , //i
     ];
@@ -128,15 +140,14 @@ const sale1 = [
     function mergeAndSum(sale1,sale2){
         var mergeSale = [];
         mergeSale = [...sale1 , ...sale2];
-        var finalArray = [
-            item[1] // {productId : 1 , productName : "Product A" , amount : 100} 
+        var finalArray = []
+            // item[1] // {productId : 1 , productName : "Product A" , amount : 100} 
             // {productId : 2 , productName : "Product B" , amount : 150}
-        ];
 
         // console.log(mergeSale);
         for(let i of mergeSale ){
-        const existingProduct = finalArray.find((item) => item.productId === i.productId)
-//undef
+        const existingProduct = finalArray.find((item) => item.productId === i.productId) // true  
+//undef falsy value
             if(existingProduct) {
               existingProduct.amount += i.amount;
             //   console.log(finalArray);
@@ -148,9 +159,7 @@ const sale1 = [
      return finalArray   
     }
 console.log(mergeAndSum(sale1,sale2));
-
-
-
+*/
 //acc = 1 , curr = 2  => return acc = acc + 5
 //15
 //  0,   cr
@@ -163,3 +172,34 @@ reduce(acc , curr) => {
     } , array[0];   
 }
 */
+const employees = [
+	{
+		name: "John",
+		department: "Engineering",
+		salary: 1000,
+		projects: ["Project A", "Project B"],
+	},
+	{
+		name: "Jane",
+		department: "Marketing",
+		salary: 1500,
+		projects: ["Project B", "Project C"],
+	},
+	{
+		name: "Jim",
+		department: "Engineering",
+		salary: 500,
+		projects: ["Project A"],
+	},
+	{
+		name: "Jack",
+		department: "HR",
+		salary: 800,
+		projects: ["ProjectC", "Project A"],
+	},
+];
+
+{
+    pa : {totalsal : 2300 , names: []},
+     pb , pc , pd
+}
